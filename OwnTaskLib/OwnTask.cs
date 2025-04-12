@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.ExceptionServices;
 
-namespace OwnTask;
+namespace OwnTaskLib;
 
 [AsyncMethodBuilder(typeof(OwnAsyncMethodBuilder))]
 public class OwnTask

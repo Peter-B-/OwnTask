@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Shouldly" Version="4.3.0"/>
+        <PackageReference Include="TUnit" Version="0.19.64"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\OwnTaskLib\OwnTaskLib.csproj"/>
+    </ItemGroup>
+
+</Project>

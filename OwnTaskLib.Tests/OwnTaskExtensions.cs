@@ -1,4 +1,4 @@
-namespace OwnTask.Tests;
+namespace OwnTaskLib.Tests;
 
 public static class OwnTaskExtensions
 {

@@ -1,6 +1,6 @@
 ﻿using Shouldly;
 
-namespace OwnTask.Tests;
+namespace OwnTaskLib.Tests;
 
 [Timeout(100)]
 public class Wait

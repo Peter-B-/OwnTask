@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace OwnTask;
+namespace OwnTaskLib;
 
 public readonly struct OwnAsyncMethodBuilder
 {

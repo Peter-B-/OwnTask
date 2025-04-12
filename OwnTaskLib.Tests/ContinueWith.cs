@@ -1,6 +1,6 @@
 using Shouldly;
 
-namespace OwnTask.Tests;
+namespace OwnTaskLib.Tests;
 
 public class ContinueWith
 {
@@ -27,8 +27,8 @@ public class ContinueWith
         await t2.ShouldComplete(timeoutToken);
         executed.ShouldBeTrue();
     }
-    
-    
+
+
     [Test]
     public async Task SetException_ContinuationIsExecuted(CancellationToken timeoutToken)
     {
@@ -41,5 +41,4 @@ public class ContinueWith
         await t2.ShouldComplete(timeoutToken);
         executed.ShouldBeTrue();
     }
-
 }

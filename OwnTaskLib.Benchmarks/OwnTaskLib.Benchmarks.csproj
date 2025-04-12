@@ -1,19 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <OutputType>Exe</OutputType>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <OutputType>Exe</OutputType>
+        <RootNamespace>OwnTask.Benchmarks</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Shouldly" Version="4.3.0"/>
-        <PackageReference Include="TUnit" Version="0.19.64"/>
+        <PackageReference Include="BenchmarkDotNet" Version="0.14.0"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\OwnTask\OwnTask.csproj"/>
+        <ProjectReference Include="..\OwnTaskLib\OwnTaskLib.csproj"/>
     </ItemGroup>
 
 </Project>

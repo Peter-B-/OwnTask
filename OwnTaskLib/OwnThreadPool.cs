@@ -1,6 +1,6 @@
 using System.Collections.Concurrent;
 
-namespace OwnTask;
+namespace OwnTaskLib;
 
 public static class OwnThreadPool
 {
