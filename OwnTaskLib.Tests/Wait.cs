@@ -29,4 +29,21 @@ public class Wait
         await waitTask.WaitAsync(timeoutToken)
             .ShouldThrowAsync<TestException>();
     }
+
+    [Test]
+    public void ThrowException(CancellationToken _)
+    {
+        OwnTask t = new();
+
+        t.SetException(TestException.Default);
+
+        try
+        {
+            t.Wait();
+            throw new Exception("Should throw");
+        }
+        catch (TestException)
+        {
+        }
+    }
 }

@@ -151,6 +151,31 @@ public class OwnTask
         return task;
     }
 
+    public static OwnTask Run(Func<OwnTask> action)
+    {
+        var task = new OwnTask();
+        OwnThreadPool.QueueUserWorkItem(() =>
+        {
+            try
+            {
+                var nextTask = action();
+                nextTask.ContinueWith(() =>
+                {
+                    if (nextTask._exception is null)
+                        task.SetResult();
+                    else
+                        task.SetException(nextTask._exception);
+                });
+            }
+            catch (Exception e)
+            {
+                task.SetException(e);
+            }
+        });
+        return task;
+    }
+
+    
     public void Wait()
     {
         ManualResetEventSlim? waitHandle = null;
