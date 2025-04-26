@@ -1,7 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
-using OwnTask.Benchmarks;
+using OwnTaskLib.Benchmarks;
 
-BenchmarkRunner.Run([
-    typeof(AwaitEmptyRun),
-    typeof(AwaitEmptyContinueWith)
-]);
+BenchmarkRunner.Run(typeof(AwaitEmptyRun).Assembly);

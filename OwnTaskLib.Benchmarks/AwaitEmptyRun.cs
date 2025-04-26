@@ -1,17 +1,19 @@
 using BenchmarkDotNet.Attributes;
 
-namespace OwnTask.Benchmarks;
+namespace OwnTaskLib.Benchmarks;
 
+[MemoryDiagnoser(false)]
+[HideColumns("StdDev", "RatioSD")]
 public class AwaitEmptyRun
 {
     [Benchmark]
-    public async OwnTaskLib.OwnTask MyTask()
+    public async OwnTask MyTask()
     {
-        await OwnTaskLib.OwnTask.Run(() => { });
+        await OwnTask.Run(() => { });
     }
 
     [Benchmark(Baseline = true)]
-    public async OwnTaskLib.OwnTask ThierTask()
+    public async OwnTask ThierTask()
     {
         await Task.Run(() => { });
     }
