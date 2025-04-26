@@ -17,4 +17,16 @@ public enum QuestionOf
     Everything
 }
 
+class Test
+{
+    void Start()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            Thread.Sleep(500);
+            Console.WriteLine(i);
+        }
+    }
+}
+
 #endregion
